@@ -1,20 +1,15 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Login from "./pages/Login";
-import Home from "./pages/Home";
+import { Button, Box, Typography } from "@mui/material";
 
-export default function App() {
+function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        {/* default */}
-        <Route path="/" element={<Navigate to="/login" replace />} />
+    <div className="mt-6 flex gap-4">
+      <button className="px-4 py-2 bg-red-500 text-white rounded">
+        Tailwind Button
+      </button>
 
-        <Route path="/login" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-
-        {/* fallback */}
-        <Route path="*" element={<Navigate to="/login" replace />} />
-      </Routes>
-    </BrowserRouter>
+      <Button variant="contained">MUI Button</Button>
+    </div>
   );
 }
+
+export default App;
